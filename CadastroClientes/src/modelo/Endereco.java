@@ -12,10 +12,9 @@ package modelo;
 public class Endereco {
     
     private int idEndereco;
-    private String rua;
+    private String logradouro;
     private String bairro;
     private String cidade;
-    private String numero;
     private String cep;
 
     public Endereco() {
@@ -29,13 +28,15 @@ public class Endereco {
         this.idEndereco = idEndereco;
     }
 
-    public String getRua() {
-        return rua;
+    public String getLogradouro() {
+        return logradouro;
     }
 
-    public void setRua(String rua) {
-        this.rua = rua;
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
     }
+
+ 
 
     public String getBairro() {
         return bairro;
@@ -53,13 +54,7 @@ public class Endereco {
         this.cidade = cidade;
     }
 
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
+   
 
     public String getCep() {
         return cep;

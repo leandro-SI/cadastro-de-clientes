@@ -18,6 +18,7 @@ public class Cliente {
     private String razaoSocial;
     private String cnpj;
     private String telefone;
+    private String celular;
     private String email;
     private Endereco endereco;
 
@@ -79,6 +80,16 @@ public class Cliente {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+    
+    
 
     @Override
     public int hashCode() {
