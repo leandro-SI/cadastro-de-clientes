@@ -62,6 +62,7 @@ public class Buscar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Buscar Cliente");
+        setLocation(new java.awt.Point(300, 100));
         setResizable(false);
 
         try {
@@ -120,34 +121,24 @@ public class Buscar extends javax.swing.JFrame {
         jLabel11.setText("Cep:");
 
         labelNome.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelNome.setText("jLabel12");
 
         labelRazao.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelRazao.setText("jLabel13");
 
         labelCnpj.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelCnpj.setText("jLabel14");
 
         labelTelefone.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelTelefone.setText("jLabel15");
 
         labelCelular.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelCelular.setText("jLabel16");
 
         labelEmail.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelEmail.setText("jLabel17");
 
         labelEndereco.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelEndereco.setText("jLabel18");
 
         labelBairro.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelBairro.setText("jLabel19");
 
         labelCidade.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelCidade.setText("jLabel20");
 
         labelCep.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        labelCep.setText("jLabel21");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -316,7 +307,7 @@ public class Buscar extends javax.swing.JFrame {
         String cnpjProcurado = textBuscar.getText();
         
         if(clienteDAO.BuscarCliente(cnpjProcurado) == null){
-            JOptionPane.showMessageDialog(null, "Cliente Não encontrado!");
+            JOptionPane.showMessageDialog(null, "CNPJ não encontrado!");
             textBuscar.setText("");
         }else{
             

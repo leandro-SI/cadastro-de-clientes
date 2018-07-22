@@ -69,9 +69,10 @@ public class ClienteDAOJDBC extends DAOBaseJDBC implements ClienteDAO{
         int numero = 0;
         
         String sql = "SELECT idEndereco FROM endereco ORDER BY idEndereco DESC LIMIT 1";
+        String sql_aux = "SELECT idEndereco FROM endereco WHERE idEndereco = (select max(idEndereco) from endereco)";
         
         try{
-            PreparedStatement stmt = conn.prepareStatement(sql);
+            PreparedStatement stmt = conn.prepareStatement(sql_aux);
             
             ResultSet resultado = stmt.executeQuery();
             
